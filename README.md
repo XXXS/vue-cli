@@ -1,5 +1,5 @@
 # vue-cli 使用说明 
-<h2 style="color:red">使用问题整理</h2>
+# <h2 style="color:red">使用问题整理</h2>
    1. npm run dev 自动打开浏览器   
     设置 config/index.js 中的 autoOpenBrowser: true,
    2. 关闭语法检测 单元测试  
