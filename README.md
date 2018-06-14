@@ -8,6 +8,21 @@
     Setup unit 项目名称 with karma + Mocha?(y/n) 这里选 n 敲回车
     Setup e2e 项目名称  with Nightwatch? (y/n) 这里选 n 敲回车
    ```
+   3.npm run build 打包以后图片失效
+   解决方法:  在build目录下 utils.js 文件下
+   ```
+     if (options.extract) {
+        return ExtractTextPlugin.extract({
+        use: loaders,
+        fallback: 'vue-style-loader',
+        publicPath:'../../'   // 新增这一行解决打包之后图片失效问题
+
+      })
+    } else {
+      return ['vue-style-loader'].concat(loaders)
+    }
+   ```
+
 ## 1. [安装node.js](https://nodejs.org/zh-cn/)
 ## 2. [安装Git](https://git-scm.com/)
 ## 3. 切换淘宝镜像
