@@ -47,5 +47,16 @@
   npm run dev     / 运行项目
   npm run build   / 打包上线 运行build会生成 dist文件夹 
  ```
+ 
+## 8. vue使用 sass
+```
+npm install --save-dev sass-loader
+npm install --save-dev node-sass
+
+<style  lang="scss" type="text/scss" scoped>
+@import  "./common/scss/reset.scss";
+</style>
+
+```
 
 Mail: 211366323@qq.com
