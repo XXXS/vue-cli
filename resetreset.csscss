@@ -1,0 +1,33 @@
+ /* css reset 1.0 */
+ body,html,div,span,p,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,textarea,p,blockquote,table,th,td{
+    margin:0; padding:0;border: none;
+}
+html,body{
+  -webkit-overflow-scrolling: touch;    /* ios下局部滑动 */
+  -webkit-user-select: none;  /* 禁止移动端用户进行复制.选择. */
+  -webkit-touch-callout:none;   /* 禁用长按页面时的弹出菜单 */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;  /* 禁止文字自动调整大小 */
+  font-family:  "-apple-system","Helvetica Neue",Roboto,"Segoe UI",sans-serif;
+}
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+a {text-decoration: none;}
+ul,ol,li{list-style: none;}
+img { border: 0;vertical-align: middle;}
+a,input,button {
+  border: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 透明度设置为0，去掉点击链接和文本框对象时默认的灰色半透明覆盖层(iOS)或者虚框(Android)  */
+  -webkit-appearance: none;  /* 消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式  */
+}
+i,b{font-style: none;}
+input，textarea{outline:none;  /* 取消chrome下默认的文本框聚焦样式 */}  
+.clearfix:after { /* 清除浮动 */
+    content:"";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  .clearfix {*zoom: 1;}
+  * ::-webkit-scrollbar { display: none;  /* 去掉底部滚动条 */  }
