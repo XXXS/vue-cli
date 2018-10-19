@@ -58,5 +58,37 @@ npm install --save-dev node-sass
 </style>
 
 ```
+## 9.vue路由懒加载
+
+```
+import Vue from 'vue'
+import Router from 'vue-router'
+Vue.use(Router)
+
+export default new Router({
+     // mode:'history',  //消除url中的 #
+    routes: [
+        { path:'*', redirect: 'test' }, //路由重定向 路由错误跳转到home页
+        {
+            path:'/', //首页
+            component:resolve => require(['../components/home.vue'],resolve)
+        },
+        {
+            path: '/list',
+            component: resolve => require(['../components/list.vue'], resolve)
+        }
+    ]
+})
+
+```
+
+## 10. vue打包部署在非根目录下配置
+```
+ 10.1  build 文件夹下 utils.js 文件中  
+        publicPath: '/'  设置为:  publicPath: '../../'  
+ 10.2  config 文件夹下 idnex.js 文件中
+     assetsPublicPath: './',  改为  assetsPublicPath: '/test/001/',   ( '/test/001/' == 你的服务器路径)
+```
+
 
 Mail: 211366323@qq.com
