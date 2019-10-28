@@ -2,7 +2,7 @@
 # vue-cli使用  ---- vue使用问题整理
 
 ## 1. [安装node.js](https://nodejs.org/zh-cn/)
-## 2. [安装Git](https://git-scm.com/)
+## 2. [安装Git](https://npm.taobao.org/mirrors/git-for-windows/)
 ## 3. 切换淘宝镜像
 ```
   $ npm install -g cnpm --registry=https://registry.npm.taobao.org
